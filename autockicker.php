@@ -9,7 +9,6 @@ Description: Autokicker
 require_once("tw.php");
 require_once("menu-pages.php");
 require_once("cron-class.php");
-//require_once("facebook/config.php");
 require_once("custom-metaboxes.php");
 
 $plugin_dir = plugin_dir_path( __FILE__ );
@@ -86,7 +85,6 @@ function autokick_to_twitter($id){
             'link' => $post->guid,
             'picture' => $img
         );
-        //$res = postToWall($app_id, $app_secret, $access_tokin, $page_id, $param_r, $fb);
         $times++;
         update_post_meta($id, 'autokick_times', $times);
 }
